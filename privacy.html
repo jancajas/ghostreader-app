@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Ghost Reader</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #080807;
+      --surface: #111110;
+      --border:  #222220;
+      --amber:   #F97316;
+      --amber2:  #FBBF24;
+      --text:    #F5F5F0;
+      --muted:   #999992;
+      --radius:  16px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--amber); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 14px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(8,8,7,0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-logo span {
+      background: linear-gradient(90deg, var(--amber), var(--amber2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* CONTENT */
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 120px 40px 80px;
+    }
+
+    .page-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .updated {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    ul {
+      color: var(--muted);
+      padding-left: 22px;
+      margin-bottom: 16px;
+    }
+
+    li { margin-bottom: 8px; }
+
+    .highlight {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--amber);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 36px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      nav { padding: 14px 20px; }
+      .page { padding: 100px 24px 60px; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Ghost<span>Reader</span></a>
+  </nav>
+
+  <div class="page">
+    <p class="page-eyebrow">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: March 2026</p>
+
+    <div class="highlight">
+      Ghost Reader is built on a single principle: your documents and your reading habits are none of our business. Everything stays on your device.
+    </div>
+
+    <h2>What data we collect</h2>
+    <p>
+      We collect nothing. Ghost Reader does not collect, transmit, store, or share any personal information, usage data, analytics, or crash reports.
+    </p>
+    <p>
+      There are no servers receiving your data. There is no account system. There are no third-party SDKs for analytics or advertising.
+    </p>
+
+    <h2>Documents and content</h2>
+    <p>
+      All documents you open in Ghost Reader — PDFs, EPUBs, web articles, text files — are processed entirely on your device using the on-device AI model. No document content, no extracted text, and no audio output is ever uploaded anywhere.
+    </p>
+    <p>
+      Web articles fetched via the "Paste a link" feature are loaded locally inside the app using a sandboxed web view. The content is processed on-device and never forwarded to any external service operated by us.
+    </p>
+
+    <h2>On-device AI model</h2>
+    <p>
+      Ghost Reader uses a neural text-to-speech model that runs entirely on your iPhone's processor (Apple Neural Engine / GPU). Inference happens locally — no audio is streamed to or from a cloud API.
+    </p>
+
+    <h2>Subscription and payments</h2>
+    <p>
+      Subscriptions are handled entirely by Apple through the App Store. We never see or store your payment information, billing details, or Apple ID. Subscription status is verified locally via StoreKit — no account on our end is created or required.
+    </p>
+    <p>
+      Apple's privacy policy governs how your payment and App Store data is handled: <a href="https://www.apple.com/legal/privacy/" target="_blank">apple.com/legal/privacy</a>.
+    </p>
+
+    <h2>Crash reports and diagnostics</h2>
+    <p>
+      Ghost Reader does not include any crash reporting or analytics library. If the app crashes, no information is automatically sent anywhere. You may optionally share diagnostic data with Apple through iOS system settings — that is governed by Apple's privacy policy, not ours.
+    </p>
+
+    <h2>Children's privacy</h2>
+    <p>
+      Ghost Reader does not collect any information from anyone, including children under 13. There is nothing to collect.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      If we ever change this policy in a material way, we will update the date at the top of this page. Because we collect no data, changes are unlikely to affect your privacy in practice.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions about privacy? Email us at <a href="mailto:support@ghostreader.app">support@ghostreader.app</a>.
+    </p>
+  </div>
+
+  <footer>
+    <p style="margin-bottom:8px;">
+      <strong style="color: var(--text);">Ghost Reader</strong>
+      &nbsp;·&nbsp;
+      iOS 18+
+    </p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      <a href="terms.html">Terms of Use</a>
+      &nbsp;·&nbsp;
+      <a href="mailto:support@ghostreader.app">Support</a>
+    </p>
+  </footer>
+
+</body>
+</html>

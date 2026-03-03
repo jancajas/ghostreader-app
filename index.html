@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ghost Reader — Offline AI Narrator</title>
   <meta name="description" content="Turn any document into lifelike audio. Offline. Unlimited. Ghost Reader uses on-device AI to narrate PDFs, EPUBs, web articles, and more — nothing leaves your phone." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -24,7 +28,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 19px;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -40,7 +44,8 @@
       padding: 4px 40px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 32px;
       background: rgba(8,8,7,0.88);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
@@ -381,7 +386,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-text">
+    <div class="hero-text" data-aos="fade-right" data-aos-duration="700">
       <p class="hero-eyebrow">No account · No internet needed</p>
       <h1>Your documents,<br /><em>read aloud.</em></h1>
       <p class="hero-sub">
@@ -401,7 +406,7 @@
       </div>
     </div>
 
-    <div class="hero-phone">
+    <div class="hero-phone" data-aos="fade-left" data-aos-duration="700">
       <picture>
         <source srcset="screenshots/main.webp" type="image/webp" />
         <img src="screenshots/main.png" alt="Ghost Reader home screen" loading="eager" />
@@ -411,14 +416,14 @@
 
   <!-- SCREENSHOTS -->
   <section class="screenshots">
-    <div class="phone-frame">
+    <div class="phone-frame" data-aos="fade-up" data-aos-delay="0">
       <picture>
         <source srcset="screenshots/preparing.webp" type="image/webp" />
         <img src="screenshots/preparing.png" alt="Voice selection screen" loading="lazy" />
       </picture>
       <p class="phone-caption">Pick your voice</p>
     </div>
-    <div class="phone-frame">
+    <div class="phone-frame" data-aos="fade-up" data-aos-delay="100">
       <picture>
         <source srcset="screenshots/reading.webp" type="image/webp" />
         <img src="screenshots/reading.png" alt="Narration in progress" loading="lazy" />
@@ -429,34 +434,34 @@
 
   <!-- FEATURES -->
   <section class="features">
-    <p class="section-label">Why Ghost Reader</p>
+    <p class="section-label" data-aos="fade-up">Why Ghost Reader</p>
     <div class="features-grid">
-      <div class="feature-card">
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
         <span class="feature-icon">📵</span>
         <h3>Fully offline</h3>
         <p>The AI model runs entirely on your iPhone. No Wi-Fi, no cellular, no cloud. Works on a plane, in a tunnel, anywhere.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="60">
         <span class="feature-icon">∞</span>
         <h3>No limits</h3>
         <p>No credits, no monthly caps. Listen to as many documents as you want for as long as you want.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="120">
         <span class="feature-icon">🔒</span>
         <h3>Completely private</h3>
         <p>Your documents never leave your device. No analytics, no tracking, no account required. Ever.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
         <span class="feature-icon">🎙️</span>
         <h3>Neural voices</h3>
         <p>Multiple natural-sounding AI voices in English and Spanish. Cloud-quality narration, running fully on-device.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="60">
         <span class="feature-icon">📖</span>
         <h3>Any format</h3>
         <p>PDF, EPUB, web articles, Markdown, plain text. Share from Safari, Files, or any other app.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="120">
         <span class="feature-icon">🎧</span>
         <h3>Plays everywhere</h3>
         <p>Background audio, AirPlay, lock screen controls. Ghost Reader fits into how you already listen.</p>
@@ -465,7 +470,7 @@
   </section>
 
   <!-- STRIP -->
-  <div class="strip-wrap">
+  <div class="strip-wrap" data-aos="fade-up">
     <div class="strip">
       <h2>The <em>private</em> alternative to ElevenLabs Reader and Speechify</h2>
       <p>
@@ -480,7 +485,7 @@
   </div>
 
   <!-- FORMATS -->
-  <section class="formats">
+  <section class="formats" data-aos="fade-up">
     <p class="section-label">Supported formats</p>
     <div class="formats-list">
       <span class="format-pill">PDF</span>
@@ -500,11 +505,17 @@
       iOS 18+
     </p>
     <p>
-      <a href="YOUR_PRIVACY_POLICY_URL">Privacy Policy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      <a href="terms.html">Terms of Use</a>
       &nbsp;·&nbsp;
       <a href="mailto:support@ghostreader.app">Support</a>
     </p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 600, easing: 'ease-out-quad' });
+  </script>
 </body>
 </html>
